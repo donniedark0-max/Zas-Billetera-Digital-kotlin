@@ -17,7 +17,7 @@ fun AppNavigation() {
     var currentRoute by remember { mutableStateOf(Screen.Home.route) }
 
     MainScreenView(currentRoute,navController) { paddingValues ->
-    NavHost(navController = navController, startDestination = Screen.CreditCard.route) {
+    NavHost(navController = navController, startDestination = Screen.Home.route) {
         composable(Screen.Home.route) { HomeScreen(paddingValues) }
         composable(Screen.CreditCard.route) { CreditCardScreen(paddingValues) }
         composable(Screen.Send.route) { SendScreen(navController, onRouteChange = { currentRoute = it }) }
